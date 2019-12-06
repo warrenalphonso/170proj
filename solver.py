@@ -26,6 +26,17 @@ def solve(list_of_locations, list_of_homes, starting_car_location, adjacency_mat
         NOTE: both outputs should be in terms of indices not the names of the locations themselves
     """
     pass
+    for j in range(len(adjacency_matrix[0])):
+        if adjacency_matrix[0][j] != 'x':
+            goto = j
+            break 
+    car_path = [list_of_locations.index(starting_car_location), goto, list_of_locations.index(starting_car_location)]
+    dict_walk = {}
+    dict_walk[list_of_locations.index(starting_car_location)] = [list_of_locations.index(home) for home in list_of_homes]
+    return car_path, dict_walk
+        
+
+
 
 """
 ======================================================================
